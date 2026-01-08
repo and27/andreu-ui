@@ -1,31 +1,30 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Label from './Label'
-import '../../styles/globals.css'
+import Label from "./Label";
 
 const meta = {
-  title: 'Primitives/Label',
+  title: "Primitives/Label",
   component: Label,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
-} satisfies Meta<typeof Label>
+  tags: ["autodocs"],
+} satisfies Meta<typeof Label>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    htmlFor: 'example-input',
-    children: 'Email address',
+    htmlFor: "example-input",
+    children: "Email address",
   },
-}
+};
 
 export const LongText: Story = {
   args: {
-    htmlFor: 'example-input',
-    children: 'This is a longer label that should wrap on smaller widths',
+    htmlFor: "example-input",
+    children: "This is a longer label that should wrap on smaller widths",
   },
-}
+};
