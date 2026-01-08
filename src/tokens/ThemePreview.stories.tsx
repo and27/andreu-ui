@@ -1,6 +1,4 @@
-import type { Decorator, Meta, StoryObj } from "@storybook/react";
-import { useEffect } from "react";
-import "../styles/globals.css";
+import type { Meta, StoryObj } from '@storybook/react'
 
 const styles = `
 .theme-preview {
@@ -90,16 +88,14 @@ const styles = `
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
-`;
+`
 
 const ThemePreview = () => {
   return (
     <div className="theme-preview">
       <style>{styles}</style>
       <div className="theme-preview__row">
-        <div className="theme-preview__swatch theme-preview__swatch--bg">
-          bg
-        </div>
+        <div className="theme-preview__swatch theme-preview__swatch--bg">bg</div>
         <div className="theme-preview__swatch theme-preview__swatch--surface">
           surface
         </div>
@@ -132,33 +128,32 @@ const ThemePreview = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const meta = {
-  title: "Tokens/Theme Preview",
+  title: 'Tokens/Theme Preview',
   component: ThemePreview,
-} satisfies Meta<typeof ThemePreview>;
+} satisfies Meta<typeof ThemePreview>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
-export const Light: Story = {};
-
-const DarkThemeDecorator: Decorator = (StoryFn) => {
-  useEffect(() => {
-    const root = document.documentElement;
-    root.dataset.theme = "dark";
-
-    return () => {
-      delete root.dataset.theme;
-    };
-  }, []);
-
-  return <StoryFn />;
-};
+export const Light: Story = {
+  parameters: {
+    backgrounds: { disable: true },
+  },
+  globals: {
+    theme: 'light',
+  },
+}
 
 export const Dark: Story = {
-  decorators: [DarkThemeDecorator],
-};
+  parameters: {
+    backgrounds: { disable: true },
+  },
+  globals: {
+    theme: 'dark',
+  },
+}
