@@ -3,6 +3,8 @@
   --color-surface: #ffffff;
   --color-surface-2: #efefe8;
   --color-border: #d9d8cf;
+  --color-control-bg: #ffffff;
+  --color-control-border: #8f9086;
   --color-text: #1a1b17;
   --color-muted: #3f433a;
   --color-primary: #2f6bff;
@@ -27,6 +29,8 @@
   --color-surface: #171917;
   --color-surface-2: #1f211d;
   --color-border: #2b2e28;
+  --color-control-bg: #10110f;
+  --color-control-border: #4a4f44;
   --color-text: #eef0e8;
   --color-muted: #b3b7ab;
   --color-primary: #7aa2ff;

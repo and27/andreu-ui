@@ -15,6 +15,8 @@
 - `--color-surface`
 - `--color-surface-2`
 - `--color-border`
+- `--color-control-bg`
+- `--color-control-border`
 - `--color-text`
 - `--color-muted`
 - `--color-primary`
