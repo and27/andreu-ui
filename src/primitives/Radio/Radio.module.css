@@ -1,0 +1,48 @@
+.radio {
+  --radio-bg: var(--color-control-bg);
+  --radio-border: var(--color-control-border);
+  --radio-indicator: var(--color-primary);
+
+  appearance: none;
+  width: var(--space-4);
+  height: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--radio-bg);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 calc(var(--space-1) / 4) var(--radio-border);
+}
+
+.radio::after {
+  content: "";
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--radio-indicator);
+  transform: scale(0);
+}
+
+.radio:checked::after {
+  transform: scale(1);
+}
+
+.radio:focus-visible {
+  outline: calc(var(--space-1) / 2) solid var(--color-focus);
+  outline-offset: calc(var(--space-1) / 4);
+}
+
+.radio:disabled {
+  cursor: not-allowed;
+  --radio-bg: var(--color-surface-2);
+  --radio-border: var(--color-border);
+  --radio-indicator: var(--color-muted);
+}
+
+.radio[aria-invalid="true"] {
+  --radio-border: var(--color-danger);
+}
+
+.radio[aria-invalid="true"]:checked {
+  --radio-indicator: var(--color-danger);
+}
