@@ -41,7 +41,8 @@ Provide a minimal, accessible text input primitive that is token-driven and can 
 - Background uses `--color-surface` (or `--color-bg` if you prefer; must be consistent).
 - Text uses `--color-text`.
 - Border uses `--color-border`.
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset`.
 - Invalid border uses `--color-danger` when `aria-invalid=true`.
 
 ## Accessibility requirements

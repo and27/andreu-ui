@@ -52,8 +52,11 @@ Note: states are visual and must be token-driven.
 - Background uses `--color-control-bg` (or `--color-surface` if you decide; must be consistent).
 - Border uses `--color-control-border` (or `--color-border`).
 - Checked indicator uses `--color-primary`.
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid uses `--color-danger`.
+- Control size uses `--size-control-sm`.
+- Indicator size uses `--size-control-indicator`.
 
 ## Accessibility requirements
 

@@ -41,11 +41,13 @@ composable with higher-level form patterns (FormField).
 - Background uses `--color-surface`.
 - Text uses `--color-text`.
 - Border uses `--color-border`.
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid border uses `--color-danger` when `aria-invalid=true`.
 - Radius uses `--radius-sm`.
 - Spacing uses `--space-*`.
 - Disabled uses `--opacity-disabled`.
+- Min height uses `--size-textarea-min-height`.
 
 ## Accessibility requirements
 

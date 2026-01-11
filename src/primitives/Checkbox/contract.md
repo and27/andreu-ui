@@ -51,9 +51,12 @@ Note: states are visual and must be token-driven.
 - Border uses `--color-control-border`.
 - Background uses `--color-control-bg` (unchecked) and `--color-primary` (checked), unless you implement an alternative token-driven approach.
 - Checkmark uses `--color-primary-foreground` (when checked).
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid border uses `--color-danger` when `aria-invalid="true"`.
 - Radius uses `--radius-sm` (or a consistent system choice).
+- Control size uses `--size-control-sm`.
+- Indicator size uses `--size-control-indicator`.
 - Spacing uses `--space-*` for layout around the control (if the component includes any wrapper; otherwise leave layout to consumers).
 - Disabled opacity uses `--opacity-disabled`.
 - Motion uses `--motion-duration-fast` + `--motion-ease-out`.

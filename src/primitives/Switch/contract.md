@@ -54,10 +54,11 @@ Note: states are visual and must be token-driven.
 - Track background (on): `--color-primary`.
 - Thumb background: `--color-primary-foreground` or `--color-surface` (must maintain contrast).
 - Border (if used): `--color-control-border` or `--color-border`.
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid state uses `--color-danger`.
 - Radius uses `--radius-pill`.
-- Spacing and sizing must be consistent with other form controls (derive from `--space-*`).
+- Track and thumb sizes use `--size-switch-*`.
 - Disabled opacity uses `--opacity-disabled`.
 - Motion uses `--motion-duration-fast` + `--motion-ease-out`.
 - Thumb shadow uses `--shadow-control`.

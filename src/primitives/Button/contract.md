@@ -51,7 +51,12 @@ Provide a minimal, accessible button primitive with a predictable API, token-dri
 
 - Background and border are variant-dependent (token-driven).
 - Text color must use tokens.
-- Focus ring uses `--color-focus`.
+- Border width uses `--border-width-sm`.
+- Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset`.
+- Disabled opacity uses `--opacity-disabled`.
+- Loading opacity uses `--opacity-loading`.
+- Spinner size uses `--size-spinner` with `--border-width-md`.
+- Hover shadow uses `--shadow-control` (primary variant).
 
 Minimum token mapping (suggested):
 
