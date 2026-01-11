@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "storybook/test";
 
-import RadioGroup, { RadioGroupItem } from "./RadioGroup";
+import { RadioGroup, RadioGroupItem } from ".";
 
 const meta = {
   title: "Primitives/RadioGroup",

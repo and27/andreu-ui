@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
 import { Label } from "../Label";
-import Radio from "./Radio";
+import { Radio } from ".";
 
 describe("Radio", () => {
   it("renders a radio input with required attributes", () => {

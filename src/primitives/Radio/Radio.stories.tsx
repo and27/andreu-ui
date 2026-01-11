@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "storybook/test";
 
-import Radio from "./Radio";
+import { Radio } from ".";
 
 const meta = {
   title: "Primitives/Radio",

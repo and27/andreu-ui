@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { describe, it, expect } from "vitest";
 
 import { Label } from "../Label";
-import Switch from "./Switch";
+import { Switch } from ".";
 
 describe("Switch", () => {
   it("renders a checkbox input", () => {

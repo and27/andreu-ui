@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
-import RadioGroup, { RadioGroupItem } from "./RadioGroup";
+import { RadioGroup, RadioGroupItem } from ".";
 
 describe("RadioGroup", () => {
   it("renders a fieldset and legend when label is provided", () => {
