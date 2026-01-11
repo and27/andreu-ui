@@ -1,10 +1,10 @@
 .switch {
   appearance: none;
-  width: calc(var(--space-4) + var(--space-3) + var(--space-2));
-  height: calc(var(--space-4) + var(--space-1));
+  width: var(--size-switch-width);
+  height: var(--size-switch-height);
   border-radius: var(--radius-pill);
   background: var(--color-control-bg);
-  border: calc(var(--space-1) / 4) solid var(--color-control-border);
+  border: var(--border-width-sm) solid var(--color-control-border);
   display: inline-grid;
   align-items: center;
   cursor: pointer;
@@ -13,11 +13,11 @@
 
 .switch::after {
   content: "";
-  width: var(--space-4);
-  height: var(--space-4);
+  width: var(--size-switch-thumb);
+  height: var(--size-switch-thumb);
   border-radius: var(--radius-pill);
   background: var(--color-control-border);
-  transform: translateX(calc(var(--space-1) / 2));
+  transform: translateX(var(--size-switch-thumb-offset));
   transition: transform var(--motion-duration-fast) var(--motion-ease-out);
   box-shadow: var(--shadow-control);
 }
@@ -28,13 +28,18 @@
 }
 
 .switch:checked::after {
-  transform: translateX(calc(var(--space-4) + var(--space-1) / 2));
+  transform: translateX(
+    calc(
+      var(--size-switch-width) - var(--size-switch-thumb) -
+        var(--size-switch-thumb-offset)
+    )
+  );
   background: var(--color-primary-foreground);
 }
 
 .switch:focus-visible {
-  outline: calc(var(--space-1) / 2) solid var(--color-focus);
-  outline-offset: calc(var(--space-1) / 4);
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset-tight);
 }
 
 .switch:disabled {
@@ -43,8 +48,8 @@
 }
 
 .switch[aria-invalid="true"] {
-  outline: calc(var(--space-1) / 2) solid var(--color-danger);
-  outline-offset: calc(var(--space-1) / 4);
+  outline: var(--focus-ring-width) solid var(--color-danger);
+  outline-offset: var(--focus-ring-offset-tight);
 }
 
 @media (prefers-reduced-motion: reduce) {

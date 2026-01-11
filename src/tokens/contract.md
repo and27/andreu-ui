@@ -31,12 +31,28 @@
 - `--radius-md`
 - `--radius-pill`
 
+### Border
+
+- `--border-width-sm`
+- `--border-width-md`
+
 ### Spacing
 
 - `--space-1`
 - `--space-2`
 - `--space-3`
 - `--space-4`
+
+### Size
+
+- `--size-control-sm`
+- `--size-control-indicator`
+- `--size-switch-width`
+- `--size-switch-height`
+- `--size-switch-thumb`
+- `--size-switch-thumb-offset`
+- `--size-spinner`
+- `--size-textarea-min-height`
 
 ### Typography
 
@@ -45,11 +61,20 @@
 ### Opacity
 
 - `--opacity-disabled`
+- `--opacity-loading`
+
+### Focus
+
+- `--focus-ring-width`
+- `--focus-ring-offset`
+- `--focus-ring-offset-tight`
 
 ### Motion
 
 - `--motion-duration-fast`
+- `--motion-duration-spin`
 - `--motion-ease-out`
+- `--motion-ease-linear`
 
 ### Shadow
 
@@ -62,8 +87,11 @@
   - `--color-*` for semantic color roles
   - `--space-*` for spacing steps
   - `--radius-*` for corner radii
+  - `--border-*` for border widths
+  - `--size-*` for component sizes
   - `--font-*` for font families
   - `--opacity-*` for opacity steps
+  - `--focus-*` for focus ring sizes/offsets
   - `--motion-*` for durations/easing
   - `--shadow-*` for shadow presets
 
