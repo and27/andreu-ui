@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { expect, userEvent, within } from "storybook/test";
 
 import { Input } from "../../primitives/Input";
+import { Select } from "../../primitives/Select";
+import { Textarea } from "../../primitives/Textarea";
 import { FormField } from ".";
 
 const meta = {
@@ -69,5 +71,29 @@ export const FocusLabel: Story = {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText("Email"));
     await expect(canvas.getByRole("textbox")).toHaveFocus();
+  },
+};
+
+export const SelectField: Story = {
+  args: {
+    id: "plan",
+    label: "Plan",
+    description: "Choose the plan that fits your team.",
+    children: (
+      <Select id="plan">
+        <option value="starter">Starter</option>
+        <option value="pro">Pro</option>
+        <option value="enterprise">Enterprise</option>
+      </Select>
+    ),
+  },
+};
+
+export const TextareaField: Story = {
+  args: {
+    id: "bio",
+    label: "Bio",
+    description: "Keep it short and clear.",
+    children: <Textarea id="bio" placeholder="Short bio" />,
   },
 };
