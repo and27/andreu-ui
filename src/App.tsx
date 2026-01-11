@@ -6,6 +6,7 @@ import { Label } from "./primitives/Label";
 import { RadioGroup, RadioGroupItem } from "./primitives/RadioGroup";
 import { Select } from "./primitives/Select";
 import { Switch } from "./primitives/Switch";
+import { Textarea } from "./primitives/Textarea";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
             <option value="pro">Pro</option>
             <option value="enterprise">Enterprise</option>
           </Select>
+        </div>
+        <div className="app__field">
+          <Label htmlFor="bio">Bio</Label>
+          <Textarea id="bio" placeholder="Short bio" />
         </div>
         <div className="app__row">
           <div className="app__inline">
