@@ -1,0 +1,27 @@
+.field {
+  display: grid;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+}
+
+.label {
+  color: var(--color-text);
+}
+
+.description,
+.error {
+  margin: 0;
+}
+
+.description {
+  color: var(--color-muted);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.field[data-disabled="true"] .label,
+.field[data-disabled="true"] .description {
+  color: var(--color-muted);
+}
