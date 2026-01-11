@@ -1,6 +1,23 @@
-# @andreu/ui
+# @andreu27/ui
 
 Personal UI foundation: token-driven theming, accessibility-first primitives, documented in Storybook and enforced with tests + CI.
+
+## Install (pre-release)
+
+- `npm i @andreu27/ui@next`
+
+## Usage
+
+```tsx
+import "@andreu27/ui/tokens.css";
+import { Button, FormField, Input } from "@andreu27/ui";
+
+export const Example = () => (
+  <FormField id="email" label="Email">
+    <Input id="email" placeholder="you@example.com" />
+  </FormField>
+);
+```
 
 ## Requirements
 
@@ -16,11 +33,7 @@ Personal UI foundation: token-driven theming, accessibility-first primitives, do
 
 ## Theming
 
-Tokens are CSS variables in `src/tokens/tokens.css`.
+Tokens are CSS variables in the published `tokens.css`.
 
 - Default theme: light (`:root`)
 - Dark theme: set `data-theme="dark"` on `html`
-
-## Package status
-
-Not published to npm yet.
