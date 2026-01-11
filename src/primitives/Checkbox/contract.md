@@ -55,6 +55,8 @@ Note: states are visual and must be token-driven.
 - Invalid border uses `--color-danger` when `aria-invalid="true"`.
 - Radius uses `--radius-sm` (or a consistent system choice).
 - Spacing uses `--space-*` for layout around the control (if the component includes any wrapper; otherwise leave layout to consumers).
+- Disabled opacity uses `--opacity-disabled`.
+- Motion uses `--motion-duration-fast` + `--motion-ease-out`.
 
 ## Accessibility requirements
 

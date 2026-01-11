@@ -1,10 +1,10 @@
 .switch {
   appearance: none;
-  width: 36px;
-  height: 20px;
-  border-radius: 999px;
+  width: calc(var(--space-4) + var(--space-3) + var(--space-2));
+  height: calc(var(--space-4) + var(--space-1));
+  border-radius: var(--radius-pill);
   background: var(--color-control-bg);
-  border: 1px solid var(--color-control-border);
+  border: calc(var(--space-1) / 4) solid var(--color-control-border);
   display: inline-grid;
   align-items: center;
   cursor: pointer;
@@ -13,13 +13,13 @@
 
 .switch::after {
   content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 999px;
+  width: var(--space-4);
+  height: var(--space-4);
+  border-radius: var(--radius-pill);
   background: var(--color-control-border);
-  transform: translateX(2px);
-  transition: transform 120ms ease-out;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transform: translateX(calc(var(--space-1) / 2));
+  transition: transform var(--motion-duration-fast) var(--motion-ease-out);
+  box-shadow: var(--shadow-control);
 }
 
 .switch:checked {
@@ -28,23 +28,23 @@
 }
 
 .switch:checked::after {
-  transform: translateX(18px);
+  transform: translateX(calc(var(--space-4) + var(--space-1) / 2));
   background: var(--color-primary-foreground);
 }
 
 .switch:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
+  outline: calc(var(--space-1) / 2) solid var(--color-focus);
+  outline-offset: calc(var(--space-1) / 4);
 }
 
 .switch:disabled {
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: var(--opacity-disabled);
 }
 
 .switch[aria-invalid="true"] {
-  outline: 2px solid var(--color-danger);
-  outline-offset: 2px;
+  outline: calc(var(--space-1) / 2) solid var(--color-danger);
+  outline-offset: calc(var(--space-1) / 4);
 }
 
 @media (prefers-reduced-motion: reduce) {

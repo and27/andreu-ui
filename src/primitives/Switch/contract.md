@@ -56,8 +56,11 @@ Note: states are visual and must be token-driven.
 - Border (if used): `--color-control-border` or `--color-border`.
 - Focus ring uses `--color-focus`.
 - Invalid state uses `--color-danger`.
-- Radius uses a high radius token (pill shape).
-- Spacing and sizing must be consistent with other form controls.
+- Radius uses `--radius-pill`.
+- Spacing and sizing must be consistent with other form controls (derive from `--space-*`).
+- Disabled opacity uses `--opacity-disabled`.
+- Motion uses `--motion-duration-fast` + `--motion-ease-out`.
+- Thumb shadow uses `--shadow-control`.
 
 ## Accessibility requirements
 

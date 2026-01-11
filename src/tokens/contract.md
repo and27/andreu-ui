@@ -29,6 +29,7 @@
 
 - `--radius-sm`
 - `--radius-md`
+- `--radius-pill`
 
 ### Spacing
 
@@ -41,6 +42,19 @@
 
 - `--font-sans`
 
+### Opacity
+
+- `--opacity-disabled`
+
+### Motion
+
+- `--motion-duration-fast`
+- `--motion-ease-out`
+
+### Shadow
+
+- `--shadow-control`
+
 ## Naming rules
 
 - Role-based only; no color-name tokens (no `--color-blue-*`).
@@ -49,6 +63,9 @@
   - `--space-*` for spacing steps
   - `--radius-*` for corner radii
   - `--font-*` for font families
+  - `--opacity-*` for opacity steps
+  - `--motion-*` for durations/easing
+  - `--shadow-*` for shadow presets
 
 ## Constraints
 
