@@ -1,8 +1,16 @@
-import type { ReactElement, ReactNode } from "react";
+import type { InputHTMLAttributes, ReactElement, ReactNode } from "react";
 import { Children, cloneElement, isValidElement } from "react";
 
 import { Label } from "../../primitives/Label";
 import styles from "./FormField.module.css";
+
+type FormFieldChildProps = {
+  id?: string;
+  disabled?: boolean;
+  required?: boolean;
+  "aria-describedby"?: string;
+  "aria-invalid"?: InputHTMLAttributes<HTMLElement>["aria-invalid"];
+};
 
 type FormFieldProps = {
   id: string;
@@ -13,7 +21,7 @@ type FormFieldProps = {
   disabled?: boolean;
   required?: boolean;
   className?: string;
-  children: ReactElement;
+  children: ReactElement<FormFieldChildProps>;
 };
 
 const FormField = ({
@@ -27,7 +35,7 @@ const FormField = ({
   className,
   children,
 }: FormFieldProps) => {
-  const child = Children.only(children);
+  const child = Children.only(children) as ReactElement<FormFieldChildProps>;
 
   if (!isValidElement(child)) {
     throw new Error("FormField expects a single React element child.");

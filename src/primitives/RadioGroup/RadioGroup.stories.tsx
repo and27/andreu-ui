@@ -36,8 +36,8 @@ export const Default: Story = {
     name: "plan",
     label: "Plan",
     defaultValue: "basic",
+    children: renderItems(),
   },
-  render: (args) => <RadioGroup {...args}>{renderItems()}</RadioGroup>,
 };
 
 export const WithoutLabel: Story = {
@@ -45,8 +45,8 @@ export const WithoutLabel: Story = {
     name: "plan",
     "aria-label": "Plan",
     defaultValue: "pro",
+    children: renderItems(),
   },
-  render: (args) => <RadioGroup {...args}>{renderItems()}</RadioGroup>,
 };
 
 export const Disabled: Story = {
@@ -55,8 +55,8 @@ export const Disabled: Story = {
     label: "Plan",
     defaultValue: "basic",
     disabled: true,
+    children: renderItems(),
   },
-  render: (args) => <RadioGroup {...args}>{renderItems()}</RadioGroup>,
 };
 
 export const Invalid: Story = {
@@ -65,18 +65,21 @@ export const Invalid: Story = {
     label: "Plan",
     defaultValue: "basic",
     "aria-invalid": true,
+    children: renderItems(),
   },
-  render: (args) => <RadioGroup {...args}>{renderItems()}</RadioGroup>,
 };
 
 export const Controlled: Story = {
-  render: () => {
+  args: {
+    name: "plan",
+    label: "Plan",
+    children: renderItems(),
+  },
+  render: (args) => {
     const [value, setValue] = useState("pro");
 
     return (
-      <RadioGroup name="plan" label="Plan" value={value} onValueChange={setValue}>
-        {renderItems()}
-      </RadioGroup>
+      <RadioGroup {...args} value={value} onValueChange={setValue} />
     );
   },
 };
@@ -85,11 +88,12 @@ export const FocusVisible: Story = {
   args: {
     name: "plan",
     label: "Plan",
+    children: renderItems(),
   },
   render: (args) => (
     <div style={{ display: "grid", gap: "var(--space-2)" }}>
       <button type="button">Focus me first</button>
-      <RadioGroup {...args}>{renderItems()}</RadioGroup>
+      <RadioGroup {...args} />
     </div>
   ),
   play: async ({ canvasElement }) => {

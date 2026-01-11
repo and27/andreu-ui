@@ -22,12 +22,8 @@ export const Default: Story = {
     id: "email",
     label: "Email",
     description: "We will only use this for account alerts.",
+    children: <Input id="email" placeholder="you@example.com" />,
   },
-  render: (args) => (
-    <FormField {...args}>
-      <Input id="email" placeholder="you@example.com" />
-    </FormField>
-  ),
 };
 
 export const Invalid: Story = {
@@ -35,12 +31,8 @@ export const Invalid: Story = {
     id: "email-invalid",
     label: "Email",
     error: "Enter a valid email address.",
+    children: <Input id="email-invalid" placeholder="you@example.com" />,
   },
-  render: (args) => (
-    <FormField {...args}>
-      <Input id="email-invalid" placeholder="you@example.com" />
-    </FormField>
-  ),
 };
 
 export const Disabled: Story = {
@@ -49,40 +41,30 @@ export const Disabled: Story = {
     label: "Email",
     description: "We will only use this for account alerts.",
     disabled: true,
+    children: <Input id="email-disabled" placeholder="you@example.com" />,
   },
-  render: (args) => (
-    <FormField {...args}>
-      <Input id="email-disabled" placeholder="you@example.com" />
-    </FormField>
-  ),
 };
 
 export const WithoutLabel: Story = {
   args: {
     id: "email-no-label",
     description: "Visible label omitted; input carries aria-label.",
-  },
-  render: (args) => (
-    <FormField {...args}>
+    children: (
       <Input
         id="email-no-label"
         aria-label="Email"
         placeholder="you@example.com"
       />
-    </FormField>
-  ),
+    ),
+  },
 };
 
 export const FocusLabel: Story = {
   args: {
     id: "email-focus",
     label: "Email",
+    children: <Input id="email-focus" placeholder="Press tab after click" />,
   },
-  render: (args) => (
-    <FormField {...args}>
-      <Input id="email-focus" placeholder="Press tab after click" />
-    </FormField>
-  ),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText("Email"));
