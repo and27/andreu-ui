@@ -4,6 +4,7 @@ import { Checkbox } from "./primitives/Checkbox";
 import { Input } from "./primitives/Input";
 import { Label } from "./primitives/Label";
 import { RadioGroup, RadioGroupItem } from "./primitives/RadioGroup";
+import { Select } from "./primitives/Select";
 import { Switch } from "./primitives/Switch";
 
 function App() {
@@ -32,6 +33,14 @@ function App() {
         <div className="app__field">
           <Label htmlFor="email">Email</Label>
           <Input id="email" placeholder="you@example.com" />
+        </div>
+        <div className="app__field">
+          <Label htmlFor="plan">Plan</Label>
+          <Select id="plan">
+            <option value="starter">Starter</option>
+            <option value="pro">Pro</option>
+            <option value="enterprise">Enterprise</option>
+          </Select>
         </div>
         <div className="app__row">
           <div className="app__inline">
