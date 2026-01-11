@@ -1,10 +1,10 @@
-import './App.css'
-import Button from './primitives/Button/Button'
-import Checkbox from './primitives/Checkbox/Checkbox'
-import Input from './primitives/Input/Input'
-import Label from './primitives/Label/Label'
-import Radio from './primitives/Radio/Radio'
-import Switch from './primitives/Switch/Switch'
+import "./App.css";
+import { Button } from "./primitives/Button";
+import { Checkbox } from "./primitives/Checkbox";
+import { Input } from "./primitives/Input";
+import { Label } from "./primitives/Label";
+import { RadioGroup, RadioGroupItem } from "./primitives/RadioGroup";
+import { Switch } from "./primitives/Switch";
 
 function App() {
   return (
@@ -43,19 +43,17 @@ function App() {
             <Label htmlFor="notifications">Notifications</Label>
           </div>
         </div>
-        <div className="app__row" role="radiogroup" aria-label="Plan">
-          <div className="app__inline">
-            <Radio id="plan-basic" name="plan" defaultChecked />
-            <Label htmlFor="plan-basic">Basic</Label>
-          </div>
-          <div className="app__inline">
-            <Radio id="plan-pro" name="plan" />
-            <Label htmlFor="plan-pro">Pro</Label>
-          </div>
-        </div>
+        <RadioGroup name="plan" label="Plan" defaultValue="basic">
+          <RadioGroupItem id="plan-basic" value="basic">
+            Basic
+          </RadioGroupItem>
+          <RadioGroupItem id="plan-pro" value="pro">
+            Pro
+          </RadioGroupItem>
+        </RadioGroup>
       </section>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

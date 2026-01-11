@@ -1,0 +1,38 @@
+.group {
+  display: grid;
+  gap: var(--space-2);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.legend {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+}
+
+.group[data-invalid="true"] .legend {
+  color: var(--color-danger);
+}
+
+.group[data-disabled="true"] .legend {
+  color: var(--color-muted);
+}
+
+.items {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.item[data-disabled="true"] .label {
+  color: var(--color-muted);
+}
