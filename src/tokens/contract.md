@@ -24,6 +24,7 @@
 - `--color-danger`
 - `--color-danger-foreground`
 - `--color-focus`
+- `--color-overlay`
 
 ### Radius
 
@@ -53,6 +54,7 @@
 - `--size-switch-thumb-offset`
 - `--size-spinner`
 - `--size-textarea-min-height`
+- `--size-dialog-max-width`
 
 ### Typography
 
@@ -79,6 +81,7 @@
 ### Shadow
 
 - `--shadow-control`
+- `--shadow-dialog`
 
 ## Naming rules
 

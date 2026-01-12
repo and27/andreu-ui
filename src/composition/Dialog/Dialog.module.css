@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--color-overlay);
+}
+
+.surface {
+  width: min(100%, var(--size-dialog-max-width));
+  max-height: calc(100vh - var(--space-4) * 2);
+  overflow: auto;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-dialog);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+  box-sizing: border-box;
+}
+
+.surface:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.header {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-2);
+}

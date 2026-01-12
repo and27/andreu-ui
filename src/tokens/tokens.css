@@ -12,6 +12,7 @@
   --color-danger: #dc2626;
   --color-danger-foreground: #ffffff;
   --color-focus: #2f6bff;
+  --color-overlay: rgba(0, 0, 0, 0.45);
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -33,6 +34,7 @@
   --size-switch-thumb-offset: 2px;
   --size-spinner: 14px;
   --size-textarea-min-height: 64px;
+  --size-dialog-max-width: 560px;
 
   --font-sans: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
@@ -49,6 +51,7 @@
   --motion-ease-linear: linear;
 
   --shadow-control: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-dialog: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] {
@@ -65,6 +68,7 @@
   --color-danger: #ff6b5e;
   --color-danger-foreground: #0f1114;
   --color-focus: #a4baff;
+  --color-overlay: rgba(0, 0, 0, 0.65);
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -86,6 +90,7 @@
   --size-switch-thumb-offset: 2px;
   --size-spinner: 14px;
   --size-textarea-min-height: 64px;
+  --size-dialog-max-width: 560px;
 
   --font-sans: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 
@@ -102,4 +107,5 @@
   --motion-ease-linear: linear;
 
   --shadow-control: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-dialog: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
