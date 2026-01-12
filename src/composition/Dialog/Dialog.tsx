@@ -17,7 +17,7 @@ type DialogProps = {
   title?: ReactNode;
   description?: ReactNode;
   "aria-label"?: string;
-  initialFocusRef?: RefObject<HTMLElement>;
+  initialFocusRef?: RefObject<HTMLElement | null>;
   className?: string;
   children: ReactNode;
 };
@@ -52,7 +52,7 @@ const Dialog = ({
   const isOpen = isControlled ? open : uncontrolledOpen;
   const surfaceRef = useRef<HTMLDivElement | null>(null);
   const lastActiveRef = useRef<HTMLElement | null>(null);
-  const wasOpenRef = useRef(isOpen);
+  const wasOpenRef = useRef(false);
 
   const requestClose = () => {
     if (!isControlled) {

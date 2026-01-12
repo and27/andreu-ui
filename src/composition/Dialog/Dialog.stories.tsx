@@ -49,6 +49,7 @@ export const Default: Story = {
     id: "dialog-default",
     title: "Delete project",
     description: "This removes the project and all related data.",
+    children: null,
   },
   render: (args) => <DialogExample {...args} />,
 };
@@ -57,6 +58,7 @@ export const WithoutTitle: Story = {
   args: {
     id: "dialog-aria",
     "aria-label": "Remove project",
+    children: null,
   },
   render: (args) => <DialogExample {...args} />,
 };
@@ -66,6 +68,7 @@ export const FocusTrap: Story = {
     id: "dialog-focus",
     title: "Edit profile",
     description: "Tab should stay inside the dialog.",
+    children: null,
   },
   render: (args) => {
     const confirmRef = useRef<HTMLButtonElement>(null);
