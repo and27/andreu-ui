@@ -6,6 +6,12 @@ import { Label } from "./primitives/Label";
 import { RadioGroup, RadioGroupItem } from "./primitives/RadioGroup";
 import { Select } from "./primitives/Select";
 import { Switch } from "./primitives/Switch";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./composition/DropdownMenu";
 import { Textarea } from "./primitives/Textarea";
 
 function App() {
@@ -65,6 +71,18 @@ function App() {
             Pro
           </RadioGroupItem>
         </RadioGroup>
+      </section>
+
+      <section className="app__section" aria-labelledby="menus-title">
+        <h2 id="menus-title">Menus</h2>
+        <DropdownMenu id="actions">
+          <DropdownMenuTrigger>Actions</DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>Edit</DropdownMenuItem>
+            <DropdownMenuItem>Duplicate</DropdownMenuItem>
+            <DropdownMenuItem disabled>Delete</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </section>
     </div>
   );

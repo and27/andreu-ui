@@ -1,0 +1,67 @@
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  appearance: none;
+  background: var(--color-surface);
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.trigger:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.content {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  display: grid;
+  gap: var(--space-1);
+  min-width: 100%;
+  padding: var(--space-1);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border-width-sm) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-control);
+}
+
+.item {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: var(--border-width-sm) solid transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover:not(:disabled) {
+  background: var(--color-surface-2);
+}
+
+.item:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.item:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
