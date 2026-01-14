@@ -10,6 +10,7 @@ Personal UI foundation: token-driven theming, accessibility-first primitives, do
 
 ```tsx
 import "@andreu27/ui/tokens.css";
+import "@andreu27/ui/ui.css";
 import { Button, FormField, Input } from "@andreu27/ui";
 
 export const Example = () => (
