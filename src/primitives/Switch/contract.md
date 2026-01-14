@@ -58,7 +58,8 @@ Note: states are visual and must be token-driven.
 - Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid state uses `--color-danger`.
 - Radius uses `--radius-pill`.
-- Track and thumb sizes use `--size-switch-*`.
+- Track size uses `--switch-width` and `--switch-height`.
+- Thumb size uses `--switch-thumb-size` with offset `--switch-thumb-offset`.
 - Disabled opacity uses `--opacity-disabled`.
 - Motion uses `--motion-duration-fast` + `--motion-ease-out`.
 - Thumb shadow uses `--shadow-control`.

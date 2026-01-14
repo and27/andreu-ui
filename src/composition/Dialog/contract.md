@@ -76,7 +76,7 @@ supports accessible labeling for critical user actions.
 - Shadow uses `--shadow-dialog`.
 - Radius uses `--radius-md`.
 - Spacing uses `--space-*` for padding/gap.
-- Max width uses `--size-dialog-max-width`.
+- Max width uses `--dialog-max-width`.
 - Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset`.
 
 ## Accessibility requirements

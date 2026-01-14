@@ -55,8 +55,8 @@ Note: states are visual and must be token-driven.
 - Border width uses `--border-width-sm`.
 - Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid uses `--color-danger`.
-- Control size uses `--size-control-sm`.
-- Indicator size uses `--size-control-indicator`.
+- Control size uses `--selection-control-size`.
+- Indicator size uses `--selection-indicator-size`.
 
 ## Accessibility requirements
 

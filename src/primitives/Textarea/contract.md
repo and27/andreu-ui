@@ -47,7 +47,7 @@ composable with higher-level form patterns (FormField).
 - Radius uses `--radius-sm`.
 - Spacing uses `--space-*`.
 - Disabled uses `--opacity-disabled`.
-- Min height uses `--size-textarea-min-height`.
+- Min height uses `--textarea-min-height`.
 
 ## Accessibility requirements
 

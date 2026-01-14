@@ -55,8 +55,8 @@ Note: states are visual and must be token-driven.
 - Focus ring uses `--color-focus`, `--focus-ring-width`, and `--focus-ring-offset-tight`.
 - Invalid border uses `--color-danger` when `aria-invalid="true"`.
 - Radius uses `--radius-sm` (or a consistent system choice).
-- Control size uses `--size-control-sm`.
-- Indicator size uses `--size-control-indicator`.
+- Control size uses `--selection-control-size`.
+- Indicator size uses `--selection-indicator-size`.
 - Spacing uses `--space-*` for layout around the control (if the component includes any wrapper; otherwise leave layout to consumers).
 - Disabled opacity uses `--opacity-disabled`.
 - Motion uses `--motion-duration-fast` + `--motion-ease-out`.

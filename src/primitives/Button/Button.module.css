@@ -33,8 +33,8 @@
 
 .loadingText {
   position: static;
-  width: var(--size-spinner);
-  height: var(--size-spinner);
+  width: var(--button-spinner-size);
+  height: var(--button-spinner-size);
   border-radius: var(--radius-pill);
   border: var(--border-width-md) solid var(--color-border);
   border-top-color: var(--color-text);

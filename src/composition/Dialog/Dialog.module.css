@@ -9,7 +9,7 @@
 }
 
 .surface {
-  width: min(100%, var(--size-dialog-max-width));
+  width: min(100%, var(--dialog-max-width));
   max-height: calc(100vh - var(--space-4) * 2);
   overflow: auto;
   background: var(--color-surface);

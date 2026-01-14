@@ -6,8 +6,11 @@
 - Light theme is the default and is defined on `:root` (no `data-theme` required).
 - Dark theme overrides are defined on `[data-theme="dark"]`, applied at the document level (`html` recommended).
 - Do not set theme in component code; only toggle `data-theme` at the document level.
+- Keep non-theme tokens in `:root`; override only tokens that actually change in dark (typically colors and shadows).
 
 ## Required tokens (v1)
+
+### Foundation tokens
 
 ### Colors
 
@@ -44,18 +47,6 @@
 - `--space-3`
 - `--space-4`
 
-### Size
-
-- `--size-control-sm`
-- `--size-control-indicator`
-- `--size-switch-width`
-- `--size-switch-height`
-- `--size-switch-thumb`
-- `--size-switch-thumb-offset`
-- `--size-spinner`
-- `--size-textarea-min-height`
-- `--size-dialog-max-width`
-
 ### Typography
 
 - `--font-sans`
@@ -83,6 +74,18 @@
 - `--shadow-control`
 - `--shadow-dialog`
 
+### Component tokens
+
+- `--selection-control-size`
+- `--selection-indicator-size`
+- `--switch-width`
+- `--switch-height`
+- `--switch-thumb-size`
+- `--switch-thumb-offset`
+- `--button-spinner-size`
+- `--textarea-min-height`
+- `--dialog-max-width`
+
 ## Naming rules
 
 - Role-based only; no color-name tokens (no `--color-blue-*`).
@@ -91,17 +94,17 @@
   - `--space-*` for spacing steps
   - `--radius-*` for corner radii
   - `--border-*` for border widths
-  - `--size-*` for component sizes
   - `--font-*` for font families
   - `--opacity-*` for opacity steps
   - `--focus-*` for focus ring sizes/offsets
   - `--motion-*` for durations/easing
   - `--shadow-*` for shadow presets
+  - Component scopes like `--selection-*`, `--switch-*`, `--button-*`, `--dialog-*`, `--textarea-*`
 
 ## Constraints
 
 - Components must consume tokens via `var(--token)` only; no hardcoded visual values.
-- Every required token must be defined for both light and dark themes.
+- Every required token must be defined in `:root`; dark themes only override tokens that differ.
 - Changes to the required token set must update this contract and `tokens.css` together.
 - Focus styling must rely on `--color-focus` (never remove focus without a replacement).
 

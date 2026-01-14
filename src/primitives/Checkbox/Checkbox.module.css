@@ -1,7 +1,7 @@
 .checkbox {
   appearance: none;
-  width: var(--size-control-sm);
-  height: var(--size-control-sm);
+  width: var(--selection-control-size);
+  height: var(--selection-control-size);
   border: var(--border-width-sm) solid transparent;
   border-radius: var(--radius-sm);
   background: var(--color-control-bg);
@@ -14,8 +14,8 @@
 
 .checkbox::after {
   content: "";
-  width: var(--size-control-indicator);
-  height: var(--size-control-indicator);
+  width: var(--selection-indicator-size);
+  height: var(--selection-indicator-size);
   border-radius: calc(var(--radius-sm) / 2);
   background: var(--color-primary-foreground);
   transform: scale(0);

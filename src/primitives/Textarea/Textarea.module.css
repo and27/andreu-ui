@@ -1,6 +1,6 @@
 .textarea {
   width: 100%;
-  min-height: var(--size-textarea-min-height);
+  min-height: var(--textarea-min-height);
   background: var(--color-surface);
   color: var(--color-text);
   border: var(--border-width-sm) solid var(--color-border);

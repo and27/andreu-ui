@@ -1,7 +1,7 @@
 .switch {
   appearance: none;
-  width: var(--size-switch-width);
-  height: var(--size-switch-height);
+  width: var(--switch-width);
+  height: var(--switch-height);
   border-radius: var(--radius-pill);
   background: var(--color-control-bg);
   border: var(--border-width-sm) solid var(--color-control-border);
@@ -13,11 +13,11 @@
 
 .switch::after {
   content: "";
-  width: var(--size-switch-thumb);
-  height: var(--size-switch-thumb);
+  width: var(--switch-thumb-size);
+  height: var(--switch-thumb-size);
   border-radius: var(--radius-pill);
   background: var(--color-control-border);
-  transform: translateX(var(--size-switch-thumb-offset));
+  transform: translateX(var(--switch-thumb-offset));
   transition: transform var(--motion-duration-fast) var(--motion-ease-out);
   box-shadow: var(--shadow-control);
 }
@@ -30,8 +30,8 @@
 .switch:checked::after {
   transform: translateX(
     calc(
-      var(--size-switch-width) - var(--size-switch-thumb) -
-        var(--size-switch-thumb-offset)
+      var(--switch-width) - var(--switch-thumb-size) -
+        var(--switch-thumb-offset)
     )
   );
   background: var(--color-primary-foreground);
