@@ -91,6 +91,7 @@ management and native semantics.
 - Focus ring uses `--color-focus`, `--focus-ring-width`, `--focus-ring-offset`.
 - Disabled uses `--opacity-disabled`.
 - Shadow uses `--shadow-control`.
+- Layer uses `--layer-dropdown`.
 - Spacing uses `--space-*`.
 - Radius uses `--radius-sm`.
 
@@ -100,15 +101,18 @@ management and native semantics.
 - Content is labelled by trigger (or `aria-label`) via `aria-labelledby`.
 - Items remain native focusable elements (no roving tabindex).
 - Disabled items use native `disabled` when applicable.
+- Menu closes when focus leaves the trigger/content scope.
+- Clicking outside closes the menu.
 
 ## Keyboard behavior
 
 - `Enter`/`Space` on trigger toggles menu.
 - `Escape` closes menu and returns focus to trigger.
-- `Tab` moves focus through items normally.
+- `Tab` moves focus through items normally; when focus leaves the menu, it closes.
 
 ## Acceptance criteria
 
 - Trigger toggles menu and reflects `aria-expanded`.
 - Disabled items cannot be focused or selected.
 - `Escape` closes and returns focus to trigger.
+- Clicking outside closes the menu.

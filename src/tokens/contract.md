@@ -88,6 +88,7 @@
 - `--button-spinner-size`
 - `--textarea-min-height`
 - `--dialog-max-width`
+- `--layer-dropdown`
 
 ## Naming rules
 
@@ -102,7 +103,7 @@
   - `--focus-*` for focus ring sizes/offsets
   - `--motion-*` for durations/easing
   - `--shadow-*` for shadow presets
-  - Component scopes like `--selection-*`, `--switch-*`, `--button-*`, `--dialog-*`, `--textarea-*`
+  - Component scopes like `--selection-*`, `--switch-*`, `--button-*`, `--dialog-*`, `--textarea-*`, `--layer-*`
 
 ## Constraints
 

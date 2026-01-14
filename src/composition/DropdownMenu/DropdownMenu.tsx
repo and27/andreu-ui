@@ -1,5 +1,6 @@
 import type {
   ButtonHTMLAttributes,
+  FocusEventHandler,
   HTMLAttributes,
   KeyboardEventHandler,
   MouseEventHandler,
@@ -63,6 +64,7 @@ const DropdownMenu = ({
   const isOpen = isControlled ? open : uncontrolledOpen;
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const triggerIdRef = useRef(`${id}--trigger`);
+  const rootRef = useRef<HTMLDivElement | null>(null);
 
   const setOpen = (nextOpen: boolean) => {
     if (!isControlled) {
@@ -73,11 +75,42 @@ const DropdownMenu = ({
 
   const classes = [styles.menu, className].filter(Boolean).join(" ");
 
+  const handleBlur: FocusEventHandler<HTMLDivElement> = (event) => {
+    const nextFocus = event.relatedTarget as Node | null;
+    if (nextFocus && event.currentTarget.contains(nextFocus)) {
+      return;
+    }
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: MouseEvent) => {
+      const root = rootRef.current;
+      if (!root) {
+        return;
+      }
+      if (!root.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+    };
+  }, [isOpen]);
+
   return (
     <DropdownMenuContext.Provider
       value={{ open: isOpen, setOpen, baseId: id, triggerRef, triggerIdRef }}
     >
-      <div className={classes}>{children}</div>
+      <div className={classes} ref={rootRef} onBlur={handleBlur}>
+        {children}
+      </div>
     </DropdownMenuContext.Provider>
   );
 };

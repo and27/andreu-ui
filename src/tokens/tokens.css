@@ -55,6 +55,7 @@
   --button-spinner-size: 14px;
   --textarea-min-height: 64px;
   --dialog-max-width: 560px;
+  --layer-dropdown: 10;
 }
 
 [data-theme="dark"] {

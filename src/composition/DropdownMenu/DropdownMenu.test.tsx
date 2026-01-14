@@ -74,4 +74,50 @@ describe("DropdownMenu", () => {
     expect(handleSelect).toHaveBeenCalledTimes(1);
     expect(screen.queryByText("Edit")).toBeNull();
   });
+
+  it("closes when tabbing out of the menu", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <>
+        <DropdownMenu id="actions">
+          <DropdownMenuTrigger>Actions</DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>Edit</DropdownMenuItem>
+            <DropdownMenuItem>Duplicate</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <button type="button">After</button>
+      </>
+    );
+
+    await user.click(screen.getByRole("button", { name: "Actions" }));
+
+    await user.tab();
+    await user.tab();
+
+    expect(screen.getByRole("button", { name: "After" })).toHaveFocus();
+    expect(screen.queryByText("Edit")).toBeNull();
+  });
+
+  it("closes when clicking outside", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <>
+        <DropdownMenu id="actions">
+          <DropdownMenuTrigger>Actions</DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>Edit</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        <button type="button">Outside</button>
+      </>
+    );
+
+    await user.click(screen.getByRole("button", { name: "Actions" }));
+    await user.click(screen.getByRole("button", { name: "Outside" }));
+
+    expect(screen.queryByText("Edit")).toBeNull();
+  });
 });

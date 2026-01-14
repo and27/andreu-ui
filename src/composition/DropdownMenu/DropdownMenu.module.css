@@ -28,6 +28,7 @@
   position: absolute;
   top: calc(100% + var(--space-1));
   left: 0;
+  z-index: var(--layer-dropdown);
   display: grid;
   gap: var(--space-1);
   min-width: 100%;
