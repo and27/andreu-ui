@@ -8,6 +8,12 @@ const meta = {
   component: Radio,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native radio input; label via htmlFor. Keyboard: Arrow keys move selection within the group.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Radio>;

@@ -9,6 +9,12 @@ const meta = {
   component: Textarea,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native textarea; supports aria-invalid and labels via htmlFor. Keyboard: browser-default textarea behavior.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Textarea>;

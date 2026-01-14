@@ -8,6 +8,12 @@ const meta = {
   component: Checkbox,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native checkbox input; label via htmlFor. Keyboard: Space toggles checked.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Checkbox>;

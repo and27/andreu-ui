@@ -9,6 +9,12 @@ const meta = {
   component: RadioGroup,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: uses fieldset/legend when label is provided; aria-invalid forwarded to radios. Keyboard: browser-default radio group navigation.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof RadioGroup>;

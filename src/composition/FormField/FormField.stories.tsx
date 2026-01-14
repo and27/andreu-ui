@@ -11,6 +11,12 @@ const meta = {
   component: FormField,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: wires label, description, and error text via aria-describedby and aria-invalid. Keyboard: delegates to the child control.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof FormField>;

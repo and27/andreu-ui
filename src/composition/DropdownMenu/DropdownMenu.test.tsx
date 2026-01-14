@@ -95,6 +95,7 @@ describe("DropdownMenu", () => {
 
     await user.tab();
     await user.tab();
+    await user.tab();
 
     expect(screen.getByRole("button", { name: "After" })).toHaveFocus();
     expect(screen.queryByText("Edit")).toBeNull();

@@ -13,6 +13,12 @@ const meta = {
   component: DropdownMenu,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: trigger uses aria-haspopup and aria-expanded; content labeled by trigger or aria-label. Keyboard: Enter/Space toggles trigger, Esc closes, Tab moves through items.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof DropdownMenu>;
@@ -65,4 +71,20 @@ export const KeyboardClose: Story = {
     await expect(trigger).toHaveFocus();
     await expect(canvas.queryByText("Edit")).toBeNull();
   },
+};
+
+export const DisabledItem: Story = {
+  args: {
+    id: "actions-disabled",
+    children: null,
+  },
+  render: () => (
+    <DropdownMenu id="actions-disabled" defaultOpen>
+      <DropdownMenuTrigger>Actions</DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem>Edit</DropdownMenuItem>
+        <DropdownMenuItem disabled>Archive</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  ),
 };

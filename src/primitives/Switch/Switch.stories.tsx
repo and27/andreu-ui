@@ -8,6 +8,12 @@ const meta = {
   component: Switch,
   parameters: {
     layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'A11y: input type checkbox with role="switch"; label via htmlFor. Keyboard: Space toggles.',
+      },
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Switch>

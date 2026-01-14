@@ -11,6 +11,12 @@ const meta = {
   component: Dialog,
   parameters: {
     layout: "fullscreen",
+    docs: {
+      description: {
+        component:
+          "A11y: role=\"dialog\" with aria-modal; label and description supported. Keyboard: Esc closes, Tab/Shift+Tab trapped, focus restored.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Dialog>;

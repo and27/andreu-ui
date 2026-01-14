@@ -7,6 +7,12 @@ const meta = {
   component: Input,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native text input; supports aria-invalid and labels via htmlFor. Keyboard: browser-default text input behavior.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Input>;

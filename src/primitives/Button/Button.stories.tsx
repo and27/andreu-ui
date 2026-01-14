@@ -8,6 +8,12 @@ const meta = {
   component: Button,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native button element with disabled support. Keyboard: Enter/Space activate; focus-visible preserved.",
+      },
+    },
   },
   args: {
     children: "Button",

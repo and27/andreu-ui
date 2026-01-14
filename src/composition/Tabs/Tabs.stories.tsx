@@ -8,6 +8,12 @@ const meta = {
   component: Tabs,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: tablist/tab/tabpanel wiring with roving tabindex. Keyboard: ArrowLeft/ArrowRight, Home/End, Enter/Space.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Tabs>;

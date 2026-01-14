@@ -9,6 +9,12 @@ const meta = {
   component: Select,
   parameters: {
     layout: "centered",
+    docs: {
+      description: {
+        component:
+          "A11y: native select; supports aria-invalid and labels via htmlFor. Keyboard: browser-default select behavior.",
+      },
+    },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Select>;

@@ -7,7 +7,7 @@ import type {
   ReactNode,
   RefObject,
 } from "react";
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import styles from "./DropdownMenu.module.css";
 
@@ -19,7 +19,9 @@ type DropdownMenuContextValue = {
   triggerIdRef: RefObject<string>;
 };
 
-const DropdownMenuContext = createContext<DropdownMenuContextValue | null>(null);
+const DropdownMenuContext = createContext<DropdownMenuContextValue | null>(
+  null
+);
 
 type DropdownMenuProps = {
   id: string;
